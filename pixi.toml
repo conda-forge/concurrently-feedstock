@@ -4,7 +4,7 @@
 
 [project]
 name = "concurrently-feedstock"
-version = "3.44.9"
+version = "3.45.2"
 description = "Pixi configuration for conda-forge/concurrently-feedstock"
 authors = ["@conda-forge/concurrently"]
 channels = ["conda-forge"]
