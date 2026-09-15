@@ -17,20 +17,20 @@ pnpm-licenses generate-disclaimer --prod --output-file=third-party-licenses.txt
 mkdir -p ${PREFIX}/bin
 tee ${PREFIX}/bin/concurrently << EOF
 #!/bin/sh
-exec \${CONDA_PREFIX}/lib/node_modules/concurrently/dist/bin/concurrently.js "\$@"
+exec \${CONDA_PREFIX}/lib/node_modules/concurrently/dist/bin/index.js "\$@"
 EOF
 chmod +x ${PREFIX}/bin/concurrently
 
 tee ${PREFIX}/bin/conc << EOF
 #!/bin/sh
-exec \${CONDA_PREFIX}/lib/node_modules/concurrently/dist/bin/concurrently.js "\$@"
+exec \${CONDA_PREFIX}/lib/node_modules/concurrently/dist/bin/index.js "\$@"
 EOF
 chmod +x ${PREFIX}/bin/conc
 
 tee ${PREFIX}/bin/concurrently.cmd << EOF
-call %CONDA_PREFIX%\bin\node %CONDA_PREFIX%\lib\node_modules\concurrently\dist\bin\concurrently.js %*
+call %CONDA_PREFIX%\bin\node %CONDA_PREFIX%\lib\node_modules\concurrently\dist\bin\index.js %*
 EOF
 
 tee ${PREFIX}/bin/conc.cmd << EOF
-call %CONDA_PREFIX%\bin\node %CONDA_PREFIX%\lib\node_modules\concurrently\dist\bin\concurrently.js %*
+call %CONDA_PREFIX%\bin\node %CONDA_PREFIX%\lib\node_modules\concurrently\dist\bin\index.js %*
 EOF
